@@ -1,0 +1,204 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #073f1d;
+  color: #333;
+  line-height: 1.6;
+}
+
+.banner {
+  background: #042412;
+  color: white;
+  text-align: center;
+  background-image: url(imagem/fundo.jpg);
+  padding: 40px 20px;
+}
+
+nav {
+  background: #042412;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: inline-block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+  position: relative;
+}
+
+nav a::after{
+  content: " ";
+  width: 0%;
+  height: 4px;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s ease-in-out;
+}
+
+nav a:hover::after{
+  width: 100%;
+}
+
+nav a:hover {
+  transform: scale(1.1);
+  color: #ddd;
+}
+
+main {
+  width: 80%;
+  margin: 20px auto;
+  background: white;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 10px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #073f1d;
+  border-bottom: 2px solid #073f1d;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#formacao ul,
+#experiencia ul,
+#habilidades ul {
+  list-style: none;      
+  margin: 0;
+  padding: 0;
+  display: flex;          
+  gap: 20px;             
+  flex-wrap: wrap;        
+  justify-content: center;
+}
+
+#formacao ul li,
+#experiencia ul li,
+#habilidades ul li {
+  width: 200px;          
+  height: 120px;          
+  padding: 12px;
+  display: flex;          
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #fafafa;
+  border-radius: 14px;   
+  border: 1px solid #ddd;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#formacao ul li:hover,
+#experiencia ul li:hover,
+#habilidades ul li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.contato-list{
+  list-style: none;      
+  margin: 0;
+  padding: 0;
+  display: flex;         
+  gap: 30px;      
+  flex-wrap: wrap;    
+  justify-content: center;
+}
+
+.contato-list li{
+  width: 80px;
+  height: 80px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 25px #00000051;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: .2s;
+}
+
+.contato-list li:hover{
+  width: 250px;
+}
+
+.contato-list li span{
+  position: absolute;
+}
+
+.contato-list li .icon{
+  color: #ccc;
+  font-size: 2.2em;
+  transition: .2s;
+}
+
+.contato-list li .text{
+  color: #fff;
+  font-size: 20px;
+  transform: scale(0);
+  transition: .2s;
+  transition-delay: .1s;
+}
+
+.contato-list li:hover .text{
+  transform: scale(1);
+}
+
+.contato-list li:hover .icon{
+  transform: scale(0);
+}
+
+.contato-list li::before{
+  content: '';
+  position: absolute;
+  background-color: var(--cor1);
+  inset: 0;
+  opacity: 0;
+  border-radius: 60px;
+}
+
+.contato-list li:hover::before{
+  opacity: 1;
+}
+
+.foto-perfil {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 15px auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.foto-perfil:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  text-align: center;
+  background: #042412;
+  color: white;
+  padding: 15px;
+  margin-top: 30px;
+}
